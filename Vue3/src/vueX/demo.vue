@@ -28,10 +28,10 @@ function addCount(){
   store.commit(ADD_COUNT)
 }
 
-//异步函数使用dispatch来进行派发
+//异步函数中使用dispatch来进行派发，这里的异步函数基本是指网络请求
 function subCount(){
-  store.dispatch("sub_count")
-  // store.commit(ADD_COUNT)
+  // store.dispatch("sub_count")
+  store.commit(ADD_COUNT)
 }
 
 </script>

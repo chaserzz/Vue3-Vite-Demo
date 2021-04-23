@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <span>我是视图，由父组件组成</span>
+      <span>我是视图，最外侧的组件</span>
       <div>
         <span>{{message}}</span>
       </div>
@@ -26,6 +26,7 @@ function showMessage(payload){
 onBeforeMount(() => {
   app.ctx.$bus.$on("childClick",showMessage)   
 })
+
 //在deactived这个生命周期函数时取消事件订阅
 onDeactivated(() => {
   app.ctx.$bus.$off("childClick")
